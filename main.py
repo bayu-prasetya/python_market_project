@@ -19,3 +19,15 @@ print(f"Apel  : {apple_qty} x {apple_price} = {total_price_apple}")
 print(f"Jeruk : {orange_qty} x {orange_price} = {total_price_orange}")
 print(f"Anggur: {grape_qty} x {grape_price} = {total_price_grape}")
 print(f"\nTotal: {total_price}")
+
+# payment feature
+print("-"*20) # dekorasi pembatas
+payment = int(input("\nMasukan jumlah uang: "))
+selisih = total_price - payment
+if payment < total_price:
+    print("\n[X] Transaksi dibatalkan !")
+    print(f"Uang kurang sebesar {selisih}")
+else:
+    print("\nTerima kasih!")
+    if selisih:
+        print(f"\nUang kembalian anda: {abs(selisih)}")
