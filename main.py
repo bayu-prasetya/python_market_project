@@ -1,9 +1,9 @@
 # Daftar Harga buah
 fruit_list = [
     # product_name, price, stock
-    ["apple", 10_000, 10], # 0
-    ["orange", 15_000, 10], # 1
-    ["grape", 20_000, 10] # 2
+    {"product_name": "apple", "product_price": 10_000, "product_stock": 10},
+    {"product_name": "orange", "product_price": 20_000, "product_stock": 10},
+    {"product_name": "grape", "product_price": 25_000, "product_stock": 10}
 ]
 
 # Menu input
@@ -12,15 +12,15 @@ orange_qty = int(input("Masukan jumlah jeruk: "))
 grape_qty = int(input("Masukan jumlah anggur: "))
 
 # Menu detail belanja
-total_price_apple = apple_qty * fruit_list[0][1]
-total_price_orange = orange_qty * fruit_list[1][1]
-total_price_grape = grape_qty * fruit_list[2][1]
+total_price_apple = apple_qty * fruit_list[0]["product_price"]
+total_price_orange = orange_qty * fruit_list[1]["product_price"]
+total_price_grape = grape_qty * fruit_list[2]["product_price"]
 total_price = total_price_apple + total_price_orange + total_price_grape
 
 print("\nDetail Belanja\n")
-print(f"Apel  : {apple_qty} x {fruit_list[0][1]} = {total_price_apple}")
-print(f"Jeruk : {orange_qty} x {fruit_list[1][1]} = {total_price_orange}")
-print(f"Anggur: {grape_qty} x {fruit_list[2][1]} = {total_price_grape}")
+print(f"Apel  : {apple_qty} x {fruit_list[0]["product_price"]} = {total_price_apple}")
+print(f"Jeruk : {orange_qty} x {fruit_list[1]["product_price"]} = {total_price_orange}")
+print(f"Anggur: {grape_qty} x {fruit_list[2]["product_price"]} = {total_price_grape}")
 print(f"\nTotal: {total_price}")
 
 # payment feature
